@@ -1,0 +1,45 @@
+.image-item {
+    width: 192px;
+
+    @media @phone {
+        width: 144px;
+    }
+
+    >a {
+
+        >.img-container {
+            width        : 192px;
+            height       : 192px;
+            border       : solid 0.5px #e5db20;
+            border-radius: 8px;
+
+            @media @phone {
+                width : 144px;
+                height: 144px;
+            }
+        }
+
+        >h6 {
+            font-family: "OCRAStd";
+            font-size  : 14px;
+            color      : #fff200;
+            margin-top : 14px;
+
+            @media @phone {
+                margin-top: 12px;
+            }
+        }
+
+        >.caption-container {
+            display        : flex;
+            justify-content: space-between;
+            margin-top     : 9px;
+
+            >p {
+                font-family: "OCRAStd";
+                font-size  : 12px;
+                color      : #ada730;
+            }
+        }
+    }
+}

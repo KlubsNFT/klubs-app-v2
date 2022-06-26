@@ -1,0 +1,1378 @@
+/*!*******************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/less-loader/dist/cjs.js!./docs/style/main.less ***!
+  \*******************************************************************************************************************************************/
+/*
+https://github.com/Hanul/sky-css-base
+v0.0.1 | 20210109
+Author: Sim Young Jae
+License: MIT
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*,
+*:focus {
+  outline: 0;
+}
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+a,
+button,
+input[type=button],
+input[type=submit],
+input[type=reset] {
+  cursor: pointer;
+}
+button,
+input {
+  border: none;
+}
+[hidden] {
+  display: none !important;
+}
+[contenteditable] {
+  -webkit-tap-highlight-color: transparent;
+}
+.float-wrapper:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+@font-face {
+  font-family: "NanumBarunpen";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff") format("woff");
+}
+@font-face {
+  font-family: "ArtheadFREE";
+  src: url("../fonts/Arthead-RegularFREE.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HelveticaNeue";
+  src: url("../fonts/HelveticaExt.woff2") format("woff2");
+}
+@font-face {
+  font-family: "OCRAStd";
+  src: url("../fonts/OCRAStd-Regular.woff2") format("woff2");
+}
+body {
+  margin: auto;
+  background: #000000;
+  color: #FFFFFF;
+  font-family: "HelveticaNeue";
+}
+.pc-menu {
+  flex-grow: 1;
+}
+.pc-menu > ul {
+  display: flex;
+  justify-content: space-around;
+}
+.pc-menu > ul > li {
+  display: flex;
+}
+.pc-menu > ul > li > a {
+  font-size: 16px;
+  color: inherit;
+  text-decoration: inherit;
+  font-family: HelveticaNeue;
+  font-weight: 500;
+}
+.pc-menu > ul > li > a:hover {
+  color: #FFF200;
+}
+.mobile-menu {
+  display: none;
+}
+@media only screen and (max-width: 719px) {
+  .mobile-menu {
+    display: flex;
+  }
+}
+.mobile-menu > ul {
+  display: flex;
+  gap: 16px;
+  justify-content: space-around;
+}
+.mobile-menu > ul > li {
+  display: flex;
+}
+.mobile-menu > ul > li > a {
+  font-size: 16px;
+  color: inherit;
+  text-decoration: inherit;
+  font-family: "HelveticaNeue";
+  font-weight: 500;
+}
+.mobile-menu > ul > li > a:hover {
+  color: #FFF200;
+}
+.user-menu > .connect-wallet,
+.user-menu .wallet-address {
+  font-family: "HelveticaNeue";
+  padding: 10px 17px 11px 19px;
+  border-radius: 8px;
+  border: solid 1px #fff200;
+  color: #fff200;
+}
+.popup-background {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  padding: 20px 0;
+}
+.dialogue.alert {
+  position: relative;
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  background-color: black;
+  border: 1px solid #FFF200;
+}
+.dialogue.alert > p {
+  padding: 16px;
+}
+.dialogue.alert > .button-container {
+  display: flex;
+  justify-content: space-between;
+}
+.dialogue.alert > .button-container > button {
+  width: 100%;
+  background-color: #FFF200;
+  color: black;
+  padding: 8px 16px;
+}
+.dialogue.alert > .button-container > button:hover {
+  color: black;
+  background-color: white;
+}
+.dialogue.confirm {
+  position: relative;
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  background-color: black;
+  border: 1px solid #FFF200;
+}
+.dialogue.confirm > p {
+  padding: 16px;
+}
+.dialogue.confirm > .button-container {
+  display: flex;
+  justify-content: space-between;
+}
+.dialogue.confirm > .button-container > button {
+  width: 100%;
+  background-color: #FFF200;
+  color: black;
+  padding: 8px 16px;
+}
+.dialogue.confirm > .button-container > button:hover {
+  color: black;
+  background-color: white;
+}
+.dialogue.prompt {
+  position: relative;
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+  background-color: black;
+  border: 1px solid #FFF200;
+}
+.dialogue.prompt > h6 {
+  font-size: 20px;
+  padding: 16px 16px 0px 16px;
+}
+.dialogue.prompt > p {
+  padding: 0px 16px 16px 16px;
+}
+.dialogue.prompt > .input-container {
+  margin: 16px;
+}
+.dialogue.prompt > .input-container > input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #FFF200;
+  color: white;
+  background: black;
+}
+.dialogue.prompt > .button-container {
+  display: flex;
+  justify-content: space-between;
+}
+.dialogue.prompt > .button-container > button {
+  width: 100%;
+  background-color: #FFF200;
+  color: black;
+  padding: 8px 16px;
+}
+.dialogue.prompt > .button-container > button:hover {
+  color: black;
+  background-color: white;
+}
+.connect-wallet-popup {
+  position: relative;
+  max-width: 420px;
+  width: 90%;
+  margin: auto;
+  border-radius: 4px;
+  background-color: #000000;
+}
+.connect-wallet-popup > h2 {
+  font-size: 24px;
+  padding: 16px;
+}
+.connect-wallet-popup > p {
+  padding: 16px;
+  border-top: 1px solid #CCC;
+  color: #CCC;
+}
+.connect-wallet-popup > .button-container {
+  padding: 16px;
+}
+.connect-wallet-popup > .button-container > a {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.connect-wallet-popup > .button-container > a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  color: white;
+}
+.connect-wallet-popup > .button-container > a > img {
+  margin-right: 10px;
+}
+.connect-wallet-popup > .button-container > .connect-kaikas-button {
+  background-color: #6f6558;
+  color: #ffffff;
+}
+.connect-wallet-popup > .button-container > .connect-klip-button {
+  background-color: #fee500;
+  color: #000000;
+}
+.connect-wallet-popup > .button-container > .cancel-button {
+  border: 1px solid #ffffff;
+}
+.select {
+  display: inline-block;
+  width: 100%;
+  max-width: 100px;
+}
+.select > .selected {
+  display: flex;
+  justify-content: space-between;
+}
+.select > .selected > .selected-value {
+  max-width: 420px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.select > .selected > .arrow {
+  width: 20px;
+  height: 20px;
+  background: url("/images/shared/icn/expand-more.svg") no-repeat;
+  background-size: 100%;
+}
+.select > ul {
+  display: none;
+  list-style-type: none;
+  padding-left: 0px;
+  width: 100%;
+  max-width: 100px;
+  position: absolute;
+  background: #000;
+  border-top: none;
+  margin: 1px 0 0 -1px;
+  cursor: pointer;
+}
+.select > ul > li {
+  padding: 8px 5px;
+  font-family: OCRAStd;
+  font-size: 12px;
+  color: #d6d6d6;
+}
+.select > ul > li:hover {
+  background: rgba(255, 242, 0, 0.2);
+}
+.image-item {
+  width: 192px;
+}
+@media only screen and (max-width: 719px) {
+  .image-item {
+    width: 144px;
+  }
+}
+.image-item > a > .img-container {
+  width: 192px;
+  height: 192px;
+  border: solid 0.5px #e5db20;
+  border-radius: 8px;
+}
+@media only screen and (max-width: 719px) {
+  .image-item > a > .img-container {
+    width: 144px;
+    height: 144px;
+  }
+}
+.image-item > a > h6 {
+  font-family: "OCRAStd";
+  font-size: 14px;
+  color: #fff200;
+  margin-top: 14px;
+}
+@media only screen and (max-width: 719px) {
+  .image-item > a > h6 {
+    margin-top: 12px;
+  }
+}
+.image-item > a > .caption-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
+}
+.image-item > a > .caption-container > p {
+  font-family: "OCRAStd";
+  font-size: 12px;
+  color: #ada730;
+}
+.project-item {
+  width: 192px;
+}
+@media only screen and (max-width: 719px) {
+  .project-item {
+    width: 144px;
+  }
+}
+.project-item > .img-container {
+  width: 192px;
+  height: 192px;
+  border: solid 0.5px #e5db20;
+  border-radius: 8px;
+}
+@media only screen and (max-width: 719px) {
+  .project-item > .img-container {
+    width: 144px;
+    height: 144px;
+  }
+}
+.project-item > h6 {
+  font-family: "OCRAStd";
+  font-size: 14px;
+  color: #fff200;
+  margin-top: 14px;
+}
+@media only screen and (max-width: 719px) {
+  .project-item > h6 {
+    margin-top: 12px;
+  }
+}
+.project-item > .caption-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
+}
+.project-item > .caption-container > p {
+  font-family: "OCRAStd";
+  font-size: 12px;
+  color: #ada730;
+}
+.project-item > p {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #b9b9b9;
+}
+.layout {
+  width: 100%;
+}
+.layout > header {
+  display: flex;
+  background: #171616;
+  position: sticky;
+  align-items: center;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  height: 86px;
+}
+@media only screen and (max-width: 719px) {
+  .layout > header {
+    background: #000;
+    height: auto;
+    padding: 0px 16px;
+  }
+}
+.layout > header > .nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+  height: 86px;
+  max-width: 1024px;
+}
+@media only screen and (max-width: 719px) {
+  .layout > header > .nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.layout > header > .nav > .logo {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 10%;
+}
+@media only screen and (max-width: 719px) {
+  .layout > header > .nav > .logo {
+    display: block;
+    margin-right: 0;
+  }
+}
+.layout > header > .nav > .logo > a > img {
+  height: 19px;
+}
+@media only screen and (max-width: 719px) {
+  .layout > header > .nav > .logo > a > img {
+    height: 13px;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .layout > header > .nav > .pc-menu {
+    display: none;
+  }
+}
+.layout > header > .nav > .right {
+  display: flex;
+  align-items: center;
+}
+.layout > header > .nav > .right:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.layout > header > .nav > .right > .user-menu {
+  float: right;
+}
+@media only screen and (max-width: 719px) {
+  .layout > header > .nav > .right > .user-menu {
+    display: none;
+  }
+}
+.layout > header > .nav > .right > .mobile-info {
+  display: none;
+}
+@media only screen and (max-width: 719px) {
+  .layout > header > .nav > .right > .mobile-info {
+    display: flex;
+  }
+}
+.layout > main {
+  max-width: 1024px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: auto;
+}
+@media only screen and (max-width: 719px) {
+  .layout > main {
+    padding: 16px;
+  }
+}
+.layout > footer > section {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.layout > footer > section > a {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 41px;
+  padding: 40px 30px;
+  color: white;
+}
+.layout > footer > section > a:hover {
+  color: #FFF200;
+}
+.layout > footer > section > hr {
+  border: 0;
+  border-radius: 2px;
+  width: 2px;
+  height: 14px;
+  color: #fff;
+  background-color: #fff;
+}
+.home-view > section {
+  margin-top: 42px;
+}
+.home-view > section > header > .pc-container {
+  display: flex;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > section > header > .pc-container {
+    display: none;
+  }
+}
+.home-view > section > header > .pc-container > .banner-container {
+  border-radius: 8px;
+  border: solid 1px #e5db20;
+  max-width: 650px;
+  width: 100%;
+  height: 325px;
+  margin-right: 43px;
+}
+.home-view > section > header > .pc-container > .title-container > h3 {
+  font-family: "ArtheadFREE";
+  font-size: 68px;
+  line-height: 0.88;
+  color: #fff200;
+}
+.home-view > section > header > .pc-container > .title-container > .container {
+  display: flex;
+  align-items: baseline;
+}
+.home-view > section > header > .pc-container > .title-container > .container > h3 {
+  font-family: "ArtheadFREE";
+  font-size: 68px;
+  color: #fff200;
+}
+.home-view > section > header > .pc-container > .title-container > .container > p {
+  font-family: "ArtheadFREE";
+  font-size: 32px;
+  color: #fff200;
+  margin-left: 34px;
+}
+.home-view > section > header > .pc-container > .title-container > h2 {
+  font-family: "ArtheadFREE";
+  font-size: 99px;
+  line-height: 0.66;
+  margin-top: 8px;
+}
+.home-view > section > header > .pc-container > .title-container > p {
+  margin-top: 42px;
+  font-family: "OCRAStd";
+  color: #7228db;
+}
+.home-view > section > header > .mobile-container {
+  display: none;
+}
+@media only screen and (max-width: 719px) {
+  .home-view > section > header > .mobile-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .home-view > section > header > .mobile-container > .top-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .home-view > section > header > .mobile-container > .top-container > h3 {
+    font-family: "ArtheadFREE";
+    font-size: 24px;
+    color: #fff200;
+    line-height: 1.29;
+  }
+  .home-view > section > header > .mobile-container > .top-container > p {
+    font-family: OCRAStd;
+    font-size: 12px;
+    line-height: 1.33;
+    color: #7228db;
+  }
+  .home-view > section > header > .mobile-container > .banner-container {
+    margin-top: 4px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    border: solid 1px #e5db20;
+    max-width: 650px;
+    width: 100%;
+    height: 190px;
+  }
+  .home-view > section > header > .mobile-container > .bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .home-view > section > header > .mobile-container > .bottom-container > h3 {
+    font-family: "ArtheadFREE";
+    font-size: 20px;
+    color: #fff200;
+  }
+  .home-view > section > header > .mobile-container > .bottom-container > h2 {
+    font-family: "ArtheadFREE";
+    font-size: 44px;
+  }
+}
+.home-view > section > article > .art-container {
+  margin-top: 54px;
+}
+.home-view > section > article > .art-container > h6 {
+  font-family: "HelveticaNeue";
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.home-view > section > article > .art-container > .list-container {
+  display: flex;
+  gap: 16px;
+  overflow: auto;
+}
+.home-view > section > article > .pfp-container {
+  margin-top: 25px;
+}
+.home-view > section > article > .pfp-container > h6 {
+  font-family: "HelveticaNeue";
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.home-view > section > article > .pfp-container > .list-container {
+  display: flex;
+  gap: 16px;
+  overflow: auto;
+}
+.my-arts-view > section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+}
+.my-arts-view > section > header > h2 {
+  font-family: "ArtheadFREE";
+  color: #fff200;
+  font-size: 75px;
+}
+.my-arts-view > section > header > h3 {
+  font-family: "OCRAStd";
+  margin-top: 10px;
+  color: #7228db;
+}
+.my-arts-view > section > header > .tab-container {
+  display: flex;
+  gap: 26px;
+  margin-top: 14px;
+}
+.my-arts-view > section > header > .tab-container > .active {
+  color: #fff200;
+}
+.my-arts-view > section > header > hr {
+  display: none;
+}
+@media only screen and (max-width: 719px) {
+  .my-arts-view > section > header > hr {
+    margin-top: 16px;
+    display: flex;
+    border: 0;
+    background-color: #fff200;
+    height: 1px;
+  }
+}
+.my-arts-view > section > article {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+@media only screen and (max-width: 719px) {
+  .my-arts-view > section > article {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.my-arts-view > section > article > .image-item {
+  margin-top: 24px;
+}
+.pfp-view > section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+}
+.pfp-view > section > header > .title-cotnainer {
+  display: flex;
+  align-items: baseline;
+}
+.pfp-view > section > header > .title-cotnainer > h2 {
+  font-family: "ArtheadFREE";
+  color: #fff200;
+  font-size: 75px;
+}
+.pfp-view > section > header > .title-cotnainer > h3 {
+  margin-left: 60px;
+  font-family: "OCRAStd";
+  margin-top: 10px;
+  color: #7228db;
+}
+.pfp-view > section > article {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-top: 64px;
+}
+@media only screen and (max-width: 719px) {
+  .pfp-view > section > article {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.pfp-view > section > article > .image-item {
+  margin-top: 24px;
+}
+.pfp-project-view > section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+}
+.pfp-project-view > section > header > .title-cotnainer {
+  display: flex;
+  align-items: baseline;
+}
+.pfp-project-view > section > header > .title-cotnainer > .content > h2 {
+  font-family: "ArtheadFREE";
+  color: #fff200;
+  font-size: 75px;
+}
+.pfp-project-view > section > header > .title-cotnainer > .content > h3 {
+  font-family: "OCRAStd";
+  margin-top: 10px;
+  color: #7228db;
+}
+.pfp-project-view > section > header > .img-container {
+  width: 130px;
+  height: 130px;
+  border-radius: 18px;
+  background-color: #5c5656;
+}
+.pfp-project-view > section > header > .tab-container {
+  display: flex;
+  gap: 26px;
+  margin-top: 14px;
+}
+.pfp-project-view > section > header > .tab-container > .active {
+  color: #fff200;
+}
+.pfp-project-view > section > header > hr {
+  margin-top: 16px;
+  display: flex;
+  border: 0;
+  background-color: #fff200;
+  height: 1px;
+}
+.pfp-project-view > section > header > .property-container {
+  display: flex;
+  margin: 25px 0px;
+}
+.pfp-project-view > section > header > .property-container > .title {
+  margin-right: 10px;
+}
+.pfp-project-view > section > header > .property-container > .title > h5 {
+  color: #fff200;
+}
+.pfp-project-view > section > header > .property-container > .content {
+  font-family: OCRAStd;
+  font-size: 14px;
+  color: #7228db;
+}
+.pfp-project-view > section > article {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-top: 25px;
+}
+@media only screen and (max-width: 719px) {
+  .pfp-project-view > section > article {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.pfp-project-view > section > article > .image-item {
+  margin-top: 24px;
+}
+.pfp-ranking-view > section {
+  margin-top: 48px;
+}
+.pfp-ranking-view > section > header > h2 {
+  font-family: "ArtheadFREE";
+  font-size: 75px;
+  color: #fff200;
+}
+.pfp-ranking-view > section > header > h3 {
+  font-family: "ArtheadFREE";
+  font-size: 75px;
+  color: #7c24ef;
+}
+.pfp-ranking-view > section > table {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  width: 100%;
+}
+.pfp-ranking-view > section > table > thead {
+  width: 100%;
+  font-family: "OCRAStd";
+  font-size: 14px;
+  padding-bottom: 24px;
+}
+.pfp-ranking-view > section > table > thead > tr {
+  display: flex;
+  justify-content: space-between;
+}
+.pfp-ranking-view > section > table > hr {
+  max-width: 1024px;
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background-color: #fff200;
+}
+.pfp-ranking-view > section > table > tbody {
+  color: #c9c9c9;
+}
+.pfp-ranking-view > section > table > tbody > tr {
+  margin: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.pfp-ranking-view > section > table > tbody > tr > .id {
+  color: #fff200;
+}
+.pfp-add-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.pfp-add-view > section > header > h2 {
+  font-family: "ArtheadFREE";
+  font-size: 102px;
+  color: #fff200;
+}
+@media only screen and (max-width: 719px) {
+  .pfp-add-view > section > header > h2 {
+    font-size: 58px;
+  }
+}
+.pfp-add-view > section > header > h3 {
+  font-family: "ArtheadFREE";
+  font-size: 102px;
+}
+@media only screen and (max-width: 719px) {
+  .pfp-add-view > section > header > h3 {
+    font-size: 62px;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .pfp-add-view > section > article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.pfp-add-view > section > article > h6 {
+  font-size: 19px;
+  font-weight: 500;
+  color: #7028d7;
+  margin: 35px 0px;
+}
+.pfp-add-view > section > article > input {
+  color: #fff200;
+  width: 100%;
+  font-family: OCRAStd;
+  font-size: 17px;
+  background-color: #000;
+  border-bottom: #fff200 1px solid;
+  padding: 14px 0px;
+}
+.pfp-add-view > section > article > .button-wrap {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  margin-top: 50px;
+  background-color: #fff200;
+  border-radius: 8px;
+  border: solid 1px #707070;
+}
+.pfp-add-view > section > article > .button-wrap > a {
+  font-family: "ArtheadFREE";
+  font-size: 50px;
+  color: #000;
+  padding: 4px;
+}
+.art-view > section {
+  margin-top: 48px;
+}
+.art-view > section > header > h2 {
+  font-family: "ArtheadFREE";
+  font-size: 75px;
+  color: #fff200;
+}
+.art-view > section > header > .tab-container {
+  display: flex;
+  gap: 26px;
+  margin-top: 14px;
+}
+.art-view > section > header > .tab-container > .active {
+  color: #fff200;
+}
+.art-view > section > header > hr {
+  margin-top: 16px;
+  display: flex;
+  border: 0;
+  background-color: #fff200;
+  height: 1px;
+}
+.art-view > section > article {
+  margin-top: 48px;
+}
+.art-detail-view > section {
+  margin-top: 20px;
+}
+.art-detail-view > section > header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.art-detail-view > section > header > .img-container {
+  display: flex;
+  justify-content: center;
+  max-width: 378px;
+  width: 100%;
+  max-height: 492px;
+  height: 100%;
+  border: solid 1px #707070;
+  background-color: #fff200;
+}
+.art-detail-view > section > header > hr {
+  width: 100%;
+  margin: 30px 0px;
+  display: flex;
+  border: 0;
+  background-color: #fff200;
+  height: 1px;
+}
+.art-detail-view > section > article > .title-container {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 719px) {
+  .art-detail-view > section > article > .title-container {
+    flex-direction: column;
+  }
+}
+.art-detail-view > section > article > .title-container > h2 {
+  font-family: "ArtheadFREE";
+  font-size: 75px;
+  color: #fff200;
+}
+.art-detail-view > section > article > .title-container > .info-container {
+  display: flex;
+}
+.art-detail-view > section > article > .title-container > .info-container > .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+@media only screen and (max-width: 719px) {
+  .art-detail-view > section > article > .title-container > .info-container > .content {
+    align-items: flex-start;
+  }
+}
+.art-detail-view > section > article > .title-container > .info-container > .content > p {
+  margin-top: 4px;
+  font-size: 22px;
+}
+.art-detail-view > section > article > .title-container > .info-container > a {
+  margin-left: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 224px;
+  height: 64px;
+  border-radius: 8px;
+  border: solid 1px #707070;
+  color: #000;
+  background-color: #fff200;
+  font-family: "ArtheadFREE";
+  font-size: 57px;
+}
+.art-detail-view > section > article > .caption-container {
+  display: flex;
+  margin-top: 32px;
+  margin-bottom: 24px;
+  gap: 88px;
+}
+.art-detail-view > section > article > .caption-container > .artist-container,
+.art-detail-view > section > article > .caption-container .owner-container {
+  display: flex;
+}
+.art-detail-view > section > article > .caption-container > .artist-container > p,
+.art-detail-view > section > article > .caption-container .owner-container > p {
+  margin-left: 16px;
+  font-family: "OCRAStd";
+  color: #7028d7;
+}
+.art-detail-view > section > article > .content {
+  display: flex;
+}
+@media only screen and (max-width: 719px) {
+  .art-detail-view > section > article > .content {
+    flex-direction: column;
+  }
+}
+.art-detail-view > section > article > .content > .description-container > h6 {
+  margin-bottom: 12px;
+}
+.art-detail-view > section > article > .content > .description-container > p {
+  font-family: "OCRAStd";
+  color: #7028d7;
+}
+.art-detail-view > section > article > .content > .history-container {
+  margin-left: 22px;
+}
+@media only screen and (max-width: 719px) {
+  .art-detail-view > section > article > .content > .history-container {
+    margin-left: 0px;
+    margin-top: 24px;
+  }
+}
+.art-detail-view > section > article > .content > .history-container > h6 {
+  margin-bottom: 12px;
+}
+.art-detail-view > section > article > .content > .history-container > p {
+  font-family: "OCRAStd";
+  color: #7028d7;
+}
+.artists-add-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.artists-add-view > section > header > h2 {
+  font-family: "ArtheadFREE";
+  font-size: 102px;
+  color: #fff200;
+}
+@media only screen and (max-width: 719px) {
+  .artists-add-view > section > header > h2 {
+    font-size: 58px;
+  }
+}
+.artists-add-view > section > header > h3 {
+  font-family: "ArtheadFREE";
+  font-size: 102px;
+}
+@media only screen and (max-width: 719px) {
+  .artists-add-view > section > header > h3 {
+    font-size: 62px;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .artists-add-view > section > article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.artists-add-view > section > article > h6 {
+  font-size: 19px;
+  font-weight: 500;
+  color: #7028d7;
+  margin: 35px 0px;
+}
+.artists-add-view > section > article > input {
+  color: #fff200;
+  width: 100%;
+  font-family: OCRAStd;
+  font-size: 17px;
+  background-color: #000;
+  border-bottom: #fff200 1px solid;
+  padding: 14px 0px;
+}
+.artists-add-view > section > article > .button-wrap {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  margin-top: 50px;
+  background-color: #fff200;
+  border-radius: 8px;
+  border: solid 1px #707070;
+}
+.artists-add-view > section > article > .button-wrap > a {
+  font-family: "ArtheadFREE";
+  font-size: 50px;
+  color: #000;
+  padding: 4px;
+}
+.artists-update-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.artists-update-view > section {
+  margin: auto;
+  overflow: auto;
+  width: 100%;
+}
+.artists-update-view > section > header > h2 {
+  font-family: "ArtheadFREE";
+  font-size: 102px;
+  color: #fff200;
+}
+@media only screen and (max-width: 719px) {
+  .artists-update-view > section > header > h2 {
+    font-size: 58px;
+  }
+}
+@media only screen and (max-width: 719px) {
+  .artists-update-view > section > article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.artists-update-view > section > article > hr {
+  margin-top: 16px;
+  display: flex;
+  border: 0;
+  background-color: #fff200;
+  height: 1px;
+  margin: 30px 0px;
+}
+.artists-update-view > section > article > h6 {
+  font-size: 19px;
+  font-weight: 500;
+  color: #7028d7;
+  margin: 35px 0px;
+}
+.artists-update-view > section > article > form {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  padding: 20px 0px;
+}
+.artists-update-view > section > article > form > .input-container {
+  display: flex;
+  align-items: center;
+}
+.artists-update-view > section > article > form > .input-container > label {
+  color: #e8e8e8;
+  font-size: 18px;
+  width: 120px;
+}
+.artists-update-view > section > article > form > .input-container > input {
+  margin-left: 34px;
+  color: #7028d7;
+  width: 100%;
+  font-family: "OCRAStd";
+  font-size: 17px;
+  background-color: #000;
+  padding: 14px 0px;
+}
+.artists-update-view > section > article > form > .input-container > input:focus {
+  border-bottom: #fff200 1px solid;
+}
+.artists-update-view > section > article > .royalty-container > form > h6 {
+  font-size: 18px;
+  color: #e8e8e8;
+  margin-bottom: 16px;
+}
+.artists-update-view > section > article > .royalty-container > form > .content > p {
+  margin-top: 6px;
+  font-family: "OCRAStd";
+  color: #7028d7;
+}
+.artists-update-view > section > article > .royalty-container > form > .input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+.artists-update-view > section > article > .royalty-container > form > .input-container > label {
+  color: #e8e8e8;
+  font-size: 18px;
+  width: 120px;
+}
+.artists-update-view > section > article > .royalty-container > form > .input-container > input {
+  margin-left: 12px;
+  color: #fff200;
+  width: 100%;
+  font-family: "OCRAStd";
+  font-size: 17px;
+  background-color: #000;
+  padding: 14px 0px;
+}
+.artists-update-view > section > article > .royalty-container > form > .input-container > input:focus {
+  border-bottom: #fff200 1px solid;
+}
+.artists-update-view > section > article > .button-wrap {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  margin-top: 50px;
+  background-color: #fff200;
+  border-radius: 8px;
+  border: solid 1px #707070;
+}
+.artists-update-view > section > article > .button-wrap > a {
+  font-family: "ArtheadFREE";
+  font-size: 50px;
+  color: #000;
+  padding: 4px;
+}
+

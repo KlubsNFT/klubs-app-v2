@@ -1,0 +1,75 @@
+.pfp-add-view {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    height         : 100vh;
+
+    >section {
+        >header {
+            >h2 {
+                font-family: "ArtheadFREE";
+                font-size  : 102px;
+                color      : #fff200;
+
+                @media @phone {
+                    font-size: 58px;
+                }
+            }
+
+            >h3 {
+                font-family: "ArtheadFREE";
+                font-size  : 102px;
+
+                @media @phone {
+                    font-size: 62px;
+                }
+            }
+        }
+
+        >article {
+            @media @phone {
+                display        : flex;
+                flex-direction : column;
+                justify-content: center;
+                align-items    : center;
+            }
+
+            >h6 {
+                font-size  : 19px;
+                font-weight: 500;
+                color      : #7028d7;
+                margin     : 35px 0px;
+            }
+
+            >input {
+                color           : #fff200;
+                width           : 100%;
+                font-family     : OCRAStd;
+                font-size       : 17px;
+                background-color: #000;
+                border-bottom   : #fff200 1px solid;
+                padding         : 14px 0px;
+            }
+
+            >.button-wrap {
+                margin          : auto;
+                display         : flex;
+                justify-content : center;
+                align-items     : center;
+                width           : 120px;
+                height          : 120px;
+                margin-top      : 50px;
+                background-color: #fff200;
+                border-radius   : 8px;
+                border          : solid 1px #707070;
+
+                >a {
+                    font-family: "ArtheadFREE";
+                    font-size  : 50px;
+                    color      : #000;
+                    padding    : 4px;
+                }
+            }
+        }
+    }
+}

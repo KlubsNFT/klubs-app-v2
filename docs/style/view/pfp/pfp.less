@@ -1,0 +1,42 @@
+.pfp-view {
+    >section {
+        display       : flex;
+        flex-direction: column;
+        margin-top    : 48px;
+
+        >header {
+            >.title-cotnainer {
+                display    : flex;
+                align-items: baseline;
+
+                >h2 {
+                    font-family: "ArtheadFREE";
+                    color      : #fff200;
+                    font-size  : 75px;
+                }
+
+                >h3 {
+                    margin-left: 60px;
+                    font-family: "OCRAStd";
+                    margin-top : 10px;
+                    color      : #7228db;
+                }
+            }
+        }
+
+        >article {
+            display              : grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap                  : 16px;
+            margin-top           : 64px;
+
+            @media @phone {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            >.image-item {
+                margin-top: 24px;
+            }
+        }
+    }
+}

@@ -1,0 +1,141 @@
+.art-detail-view {
+    >section {
+        margin-top: 20px;
+
+        >header {
+            display        : flex;
+            flex-direction : column;
+            justify-content: center;
+            align-items    : center;
+            width          : 100%;
+
+            >.img-container {
+                display         : flex;
+                justify-content : center;
+                max-width       : 378px;
+                width           : 100%;
+                max-height      : 492px;
+                height          : 100%;
+                border          : solid 1px #707070;
+                background-color: #fff200;
+            }
+
+            >hr {
+                width           : 100%;
+                margin          : 30px 0px;
+                display         : flex;
+                border          : 0;
+                background-color: #fff200;
+                height          : 1px;
+            }
+        }
+
+        >article {
+
+            >.title-container {
+                display        : flex;
+                justify-content: space-between;
+
+                @media @phone {
+                    flex-direction: column;
+                }
+
+                >h2 {
+                    font-family: "ArtheadFREE";
+                    font-size  : 75px;
+                    color      : #fff200;
+                }
+
+                >.info-container {
+                    display: flex;
+
+                    >.content {
+                        display        : flex;
+                        flex-direction : column;
+                        justify-content: center;
+                        align-items    : flex-end;
+
+                        @media @phone {
+                            align-items: flex-start;
+                        }
+
+                        >p {
+                            margin-top: 4px;
+                            font-size : 22px;
+                        }
+                    }
+
+                    >a {
+                        margin-left     : 12px;
+                        display         : flex;
+                        justify-content : center;
+                        align-items     : center;
+                        width           : 224px;
+                        height          : 64px;
+                        border-radius   : 8px;
+                        border          : solid 1px #707070;
+                        color           : #000;
+                        background-color: #fff200;
+                        font-family     : "ArtheadFREE";
+                        font-size       : 57px;
+                    }
+                }
+            }
+
+            >.caption-container {
+                display      : flex;
+                margin-top   : 32px;
+                margin-bottom: 24px;
+                gap          : 88px;
+
+                >.artist-container,
+                .owner-container {
+                    display: flex;
+
+                    >p {
+                        margin-left: 16px;
+                        font-family: "OCRAStd";
+                        color      : #7028d7;
+                    }
+                }
+            }
+
+            >.content {
+                display: flex;
+
+                @media @phone {
+                    flex-direction: column;
+                }
+
+                >.description-container {
+                    >h6 {
+                        margin-bottom: 12px;
+                    }
+
+                    >p {
+                        font-family: "OCRAStd";
+                        color      : #7028d7;
+                    }
+                }
+
+                >.history-container {
+                    margin-left: 22px;
+
+                    @media @phone {
+                        margin-left: 0px;
+                        margin-top : 24px;
+                    }
+
+                    >h6 {
+                        margin-bottom: 12px;
+                    }
+
+                    >p {
+                        font-family: "OCRAStd";
+                        color      : #7028d7;
+                    }
+                }
+            }
+        }
+    }
+}

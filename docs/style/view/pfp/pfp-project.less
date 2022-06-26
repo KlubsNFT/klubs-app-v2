@@ -1,0 +1,87 @@
+.pfp-project-view {
+    >section {
+        display       : flex;
+        flex-direction: column;
+        margin-top    : 48px;
+
+        >header {
+            >.title-cotnainer {
+                display    : flex;
+                align-items: baseline;
+
+                >.content {
+                    >h2 {
+                        font-family: "ArtheadFREE";
+                        color      : #fff200;
+                        font-size  : 75px;
+                    }
+
+                    >h3 {
+                        font-family: "OCRAStd";
+                        margin-top : 10px;
+                        color      : #7228db;
+                    }
+                }
+            }
+
+            >.img-container {
+                width           : 130px;
+                height          : 130px;
+                border-radius   : 18px;
+                background-color: #5c5656;
+            }
+
+            >.tab-container {
+                display   : flex;
+                gap       : 26px;
+                margin-top: 14px;
+
+                >.active {
+                    color: #fff200;
+                }
+            }
+
+            >hr {
+                margin-top      : 16px;
+                display         : flex;
+                border          : 0;
+                background-color: #fff200;
+                height          : 1px;
+            }
+
+            >.property-container {
+                display: flex;
+                margin : 25px 0px;
+
+                >.title {
+                    margin-right: 10px;
+
+                    >h5 {
+                        color: #fff200;
+                    }
+                }
+
+                >.content {
+                    font-family: OCRAStd;
+                    font-size  : 14px;
+                    color      : #7228db;
+                }
+            }
+        }
+
+        >article {
+            display              : grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap                  : 16px;
+            margin-top           : 25px;
+
+            @media @phone {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            >.image-item {
+                margin-top: 24px;
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.my-arts-view {
+    >section {
+        display       : flex;
+        flex-direction: column;
+        margin-top    : 48px;
+
+        >header {
+            >h2 {
+                font-family: "ArtheadFREE";
+                color      : #fff200;
+                font-size  : 75px;
+            }
+
+            >h3 {
+                font-family: "OCRAStd";
+                margin-top : 10px;
+                color      : #7228db;
+            }
+
+            >.tab-container {
+                display   : flex;
+                gap       : 26px;
+                margin-top: 14px;
+
+                >.active {
+                    color: #fff200;
+                }
+            }
+
+            >hr {
+                display: none;
+
+                @media @phone {
+                    margin-top      : 16px;
+                    display         : flex;
+                    border          : 0;
+                    background-color: #fff200;
+                    height          : 1px;
+                }
+            }
+        }
+
+        >article {
+            display              : grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap                  : 16px;
+
+            @media @phone {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            >.image-item {
+                margin-top: 24px;
+            }
+        }
+    }
+}
