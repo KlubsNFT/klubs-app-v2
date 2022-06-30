@@ -1,6 +1,7 @@
 import { BrowserInfo, msg } from "skydapp-browser";
 import { SkyRouter } from "skydapp-common";
 import superagent from "superagent";
+import Wallet from "./klaytn/Wallet";
 import AddArtists from "./view/art/AddArtists";
 import Art from "./view/art/art";
 import ArtDetail from "./view/art/ArtDetail";
@@ -55,5 +56,9 @@ import OnSale from "./view/user/OnSale";
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);
         sessionStorage.removeItem("__spa_path");
+    }
+
+    if (await Wallet.connected() !== true) {
+        await Wallet.connect();
     }
 })();

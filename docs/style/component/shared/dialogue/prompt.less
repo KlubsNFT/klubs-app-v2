@@ -1,46 +1,70 @@
 .dialogue.prompt {
     position        : relative;
-    max-width       : 600px;
-    width           : 90%;
+    max-width       : 492px;
+    height          : 317px;
+    width           : 100%;
     margin          : auto;
-    background-color: black;
-    border          : 1px solid #FFF200;
+    border-radius   : 8px;
+    border          : solid 0.5px #e5db20;
+    background-color: #171616;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
 
-    >h6 {
-        font-size: 20px;
-        padding  : 16px 16px 0px 16px;
+    >.close-container {
+        cursor         : pointer;
+        display        : flex;
+        justify-content: flex-end;
+        padding        : 20px;
     }
 
-    >p {
-        padding: 0px 16px 16px 16px;
-    }
+    >.content {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        text-align     : center;
 
-    >.input-container {
-        margin: 16px;
+        >h6 {
+            font-family: ArtheadFREE;
+            font-size  : 42px;
+            color      : #fff200;
+        }
 
-        >input {
-            width     : 100%;
-            padding   : 8px;
-            border    : 1px solid #FFF200;
-            color     : white;
-            background: black;
+        >p {
+            font-family: NanumBarunpen;
+            padding    : 16px;
+        }
+
+        >.input-container {
+            display        : flex;
+            justify-content: center;
+            width          : 100%;
+
+            >input {
+                max-width       : 390px;
+                width           : 100%;
+                font-family     : OCRAStd;
+                font-size       : 18px;
+                color           : #7028d7;
+                background-color: #171616;
+                border-bottom   : solid 1px #2b2a2a;
+            }
         }
     }
 
     >.button-container {
         display        : flex;
-        justify-content: space-between;
+        justify-content: center;
+        margin-bottom  : 35px;
+        gap            : 20px;
 
         >button {
-            width           : 100%;
             background-color: #FFF200;
             color           : black;
-            padding         : 8px 16px;
-
-            &:hover {
-                color           : black;
-                background-color: white;
-            }
+            font-family     : ArtheadFREE;
+            font-size       : 39px;
+            padding         : 12px 4px;
+            border-radius   : 4px;
         }
     }
 }

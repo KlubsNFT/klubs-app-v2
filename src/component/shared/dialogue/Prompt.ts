@@ -15,11 +15,16 @@ export default class Prompt extends Popup {
         super(".popup-background");
         this.append(
             this.content = el(".dialogue.prompt",
-                el("h6", title),
-                el(".input-container",
-                    this.input = el("input", { placeholder: placeholder }),
+                el(".close-container", { click: () => { this.delete() } },
+                    el("img", { src: "/images/icn/close.svg", alt: "close" }),
                 ),
-                el("p", message),
+                el(".content",
+                    el("h6", title),
+                    el("p", message),
+                    el(".input-container",
+                        this.input = el("input", { placeholder: placeholder }),
+                    ),
+                ),
                 el(".button-container",
                     el("button", msg("CANCEL_BUTTON"), {
                         click: () => this.delete(),

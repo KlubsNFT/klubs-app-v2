@@ -259,92 +259,160 @@ body {
 }
 .dialogue.alert {
   position: relative;
-  max-width: 600px;
-  width: 90%;
+  max-width: 492px;
+  height: 317px;
+  width: 100%;
   margin: auto;
-  background-color: black;
-  border: 1px solid #FFF200;
+  border-radius: 8px;
+  border: solid 0.5px #e5db20;
+  background-color: #171616;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.dialogue.alert > p {
+.dialogue.alert > .close-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.dialogue.alert > .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.dialogue.alert > .content > h6 {
+  font-family: ArtheadFREE;
+  font-size: 42px;
+  color: #fff200;
+}
+.dialogue.alert > .content > p {
+  font-family: NanumBarunpen;
   padding: 16px;
 }
 .dialogue.alert > .button-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  margin-bottom: 35px;
 }
 .dialogue.alert > .button-container > button {
-  width: 100%;
   background-color: #FFF200;
   color: black;
-  padding: 8px 16px;
-}
-.dialogue.alert > .button-container > button:hover {
-  color: black;
-  background-color: white;
+  font-family: ArtheadFREE;
+  font-size: 39px;
+  padding: 12px 4px;
+  border-radius: 4px;
 }
 .dialogue.confirm {
   position: relative;
-  max-width: 600px;
-  width: 90%;
+  max-width: 492px;
+  height: 317px;
+  width: 100%;
   margin: auto;
-  background-color: black;
-  border: 1px solid #FFF200;
+  border-radius: 8px;
+  border: solid 0.5px #e5db20;
+  background-color: #171616;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.dialogue.confirm > p {
+.dialogue.confirm > .close-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.dialogue.confirm > .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.dialogue.confirm > .content > h6 {
+  font-family: ArtheadFREE;
+  font-size: 42px;
+  color: #fff200;
+}
+.dialogue.confirm > .content > p {
+  font-family: NanumBarunpen;
   padding: 16px;
 }
 .dialogue.confirm > .button-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  margin-bottom: 35px;
+  gap: 20px;
 }
 .dialogue.confirm > .button-container > button {
-  width: 100%;
   background-color: #FFF200;
   color: black;
-  padding: 8px 16px;
-}
-.dialogue.confirm > .button-container > button:hover {
-  color: black;
-  background-color: white;
+  font-family: ArtheadFREE;
+  font-size: 39px;
+  padding: 12px 4px;
+  border-radius: 4px;
 }
 .dialogue.prompt {
   position: relative;
-  max-width: 600px;
-  width: 90%;
-  margin: auto;
-  background-color: black;
-  border: 1px solid #FFF200;
-}
-.dialogue.prompt > h6 {
-  font-size: 20px;
-  padding: 16px 16px 0px 16px;
-}
-.dialogue.prompt > p {
-  padding: 0px 16px 16px 16px;
-}
-.dialogue.prompt > .input-container {
-  margin: 16px;
-}
-.dialogue.prompt > .input-container > input {
+  max-width: 492px;
+  height: 317px;
   width: 100%;
-  padding: 8px;
-  border: 1px solid #FFF200;
-  color: white;
-  background: black;
+  margin: auto;
+  border-radius: 8px;
+  border: solid 0.5px #e5db20;
+  background-color: #171616;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.dialogue.prompt > .close-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.dialogue.prompt > .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.dialogue.prompt > .content > h6 {
+  font-family: ArtheadFREE;
+  font-size: 42px;
+  color: #fff200;
+}
+.dialogue.prompt > .content > p {
+  font-family: NanumBarunpen;
+  padding: 16px;
+}
+.dialogue.prompt > .content > .input-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.dialogue.prompt > .content > .input-container > input {
+  max-width: 390px;
+  width: 100%;
+  font-family: OCRAStd;
+  font-size: 18px;
+  color: #7028d7;
+  background-color: #171616;
+  border-bottom: solid 1px #2b2a2a;
 }
 .dialogue.prompt > .button-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  margin-bottom: 35px;
+  gap: 20px;
 }
 .dialogue.prompt > .button-container > button {
-  width: 100%;
   background-color: #FFF200;
   color: black;
-  padding: 8px 16px;
-}
-.dialogue.prompt > .button-container > button:hover {
-  color: black;
-  background-color: white;
+  font-family: ArtheadFREE;
+  font-size: 39px;
+  padding: 12px 4px;
+  border-radius: 4px;
 }
 .connect-wallet-popup {
   max-width: 810px;
@@ -453,6 +521,7 @@ body {
   }
 }
 .connect-wallet-popup > .right-container > .button-container > .kaikas-button {
+  text-decoration: none;
   background-color: #6d6559;
   color: #fff;
 }

@@ -5,6 +5,7 @@ export default class Confirm extends Popup {
     public content: DomNode;
 
     constructor(
+        title: string,
         message: string,
         confirmTitle: string,
         confirm: () => void,
@@ -12,7 +13,13 @@ export default class Confirm extends Popup {
         super(".popup-background");
         this.append(
             this.content = el(".dialogue.confirm",
-                el("p", message),
+                el(".close-container", { click: () => { this.delete() } },
+                    el("img", { src: "/images/icn/close.svg", alt: "close" }),
+                ),
+                el(".content",
+                    el("h6", title),
+                    el("p", message),
+                ),
                 el(".button-container",
                     el("button", msg("CANCEL_BUTTON"), {
                         click: () => this.delete(),

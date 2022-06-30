@@ -1,7 +1,7 @@
 import { DomNode, el } from "skydapp-browser";
 import { View, ViewParams } from "skydapp-common";
 import ImageItem from "../component/ImageItem";
-import ConnectWalletPopup from "../component/shared/ConnectWalletPopup";
+import Confirm from "../component/shared/dialogue/Confirm";
 import Layout from "./Layout";
 
 export default class Home implements View {
@@ -16,7 +16,6 @@ export default class Home implements View {
     constructor() {
         Layout.current.title = "Meet Connect Play with";
         Layout.current.content.append(this.container = el(".home-view",
-            new ConnectWalletPopup(() => { }),
             el("section",
                 el("header",
                     el(".pc-container",
