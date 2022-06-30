@@ -1,8 +1,10 @@
 import { DomNode, el } from "skydapp-browser";
 import { View, ViewParams } from "skydapp-common";
 import ImageItem from "../component/ImageItem";
-import Confirm from "../component/shared/dialogue/Confirm";
 import Layout from "./Layout";
+import ArtData from "../data/art.json";
+import PfpData from "../data/pfp.json";
+import ProjectItem from "../component/ProjectItem";
 
 export default class Home implements View {
 
@@ -20,7 +22,7 @@ export default class Home implements View {
                 el("header",
                     el(".pc-container",
                         el(".banner-container",
-                            this.bannerDisplay = el("img", { src: "", alt: "" }),
+                            this.bannerDisplay = el("img", { src: "https://api.klu.bs/thumbnail?url=https%3A%2F%2Fstorage.googleapis.com%2Fklubs%2Fpfpbanner%2Fda7222bf-788a-4f05-b6f7-0c93325447b1.png", alt: "" }),
                         ),
                         el(".title-container",
                             el("h3", "Meet"),
@@ -69,20 +71,25 @@ export default class Home implements View {
     }
 
     private loadBanner(): void {
-        this.bannerDisplay.empty().append();
-        this.bannerArtistDisplay.empty().appendText("BY IDNAME");
+        this.bannerDisplay.empty().append(
+        );
+        this.bannerArtistDisplay.empty().appendText("BY KlayRabbit");
     }
 
     private loadArtList(): void {
-        this.artDisplay.empty().append(
-            new ImageItem("/arts/1", "", "title", "@artist ID", "0.0"),
-        );
+        ArtData.map((data) => {
+            this.artDisplay.append(
+                new ImageItem("/arts/1", data.image, data.title, data.artist, data.price),
+            );
+        });
     }
 
     private loadPfpList(): void {
-        this.pfpDisplay.empty().append(
-            new ImageItem("/pfp/1", "", "title", "@artist ID", "0.0"),
-        );
+        PfpData.map((data) => {
+            this.pfpDisplay.append(
+                new ProjectItem("/pfp/1", data.image, data.title, data.artist, data.description),
+            );
+        });
     }
 
 

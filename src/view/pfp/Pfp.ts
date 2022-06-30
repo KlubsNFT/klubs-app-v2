@@ -2,6 +2,7 @@ import { DomNode, el } from "skydapp-browser";
 import { View, ViewParams } from "skydapp-common";
 import ProjectItem from "../../component/ProjectItem";
 import Layout from "../Layout";
+import PfpData from "../../data/pfp.json";
 
 export default class Pfp implements View {
 
@@ -16,7 +17,6 @@ export default class Pfp implements View {
                 el("header",
                     el(".title-cotnainer",
                         el("h2", "PFP"),
-                        el("h3", "BY IDNAME"),
                     ),
                 ),
                 this.pfpDisplay = el("article",
@@ -31,7 +31,11 @@ export default class Pfp implements View {
     }
 
     private loadProject(): void {
-        this.pfpDisplay.empty().append(new ProjectItem("", "title", "@artist ID", "WELCOME-TO-THE-REALMSF-EE"));
+        PfpData.map((data) => {
+            this.pfpDisplay.append(
+                new ProjectItem("/pfp/1", data.image, data.title, data.artist, data.description),
+            );
+        });
     }
 
     public changeParams(params: ViewParams, uri: string): void { }

@@ -1,8 +1,7 @@
 import { DomNode, el } from "skydapp-browser";
 import { View, ViewParams } from "skydapp-common";
-import ImageItem from "../../component/ImageItem";
 import Layout from "../Layout";
-import ViewUtil from "../ViewUtil";
+import ArtData from "../../data/art.json";
 
 export default class ArtDetail implements View {
 
@@ -24,7 +23,7 @@ export default class ArtDetail implements View {
                 el("header",
                     el("hr"),
                     el(".img-container",
-                        this.imageDisplay = el("img", { src: "", alt: "test" }),
+                        this.imageDisplay = el("img", { src: ArtData[4].image, alt: "test" }),
                     ),
                     el("hr"),
                 ),
@@ -66,14 +65,15 @@ export default class ArtDetail implements View {
     }
 
     private init(): void {
-        this.imageDisplay.empty().append();
-        this.titleDisplay.empty().append();
-        this.dateDisplay.empty().append();
-        this.priceDisplay.empty().append();
-        this.artistDisplay.empty().append();
-        this.ownerDisplay.empty().append();
-        this.descriptionDisplay.empty().append();
-        this.transactionDisplay.empty().append();
+        this.imageDisplay.empty().append(
+        );
+        this.titleDisplay.empty().appendText(ArtData[4].title);
+        // this.dateDisplay.empty().append();
+        this.priceDisplay.empty().appendText(ArtData[4].price);
+        this.artistDisplay.empty().appendText(ArtData[4].artist);
+        // this.ownerDisplay.empty().append();
+        // this.descriptionDisplay.empty().append();
+        // this.transactionDisplay.empty().append();
     }
 
     public changeParams(params: ViewParams, uri: string): void { }

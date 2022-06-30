@@ -5,44 +5,63 @@
         width: 144px;
     }
 
-    >.img-container {
-        width        : 192px;
-        height       : 192px;
-        border       : solid 0.5px #e5db20;
-        border-radius: 8px;
+    >a {
+        >.img-container {
+            width : 192px;
+            height: 192px;
 
-        @media @phone {
-            width : 144px;
-            height: 144px;
+            @media @phone {
+                width : 144px;
+                height: 144px;
+            }
+
+            >img {
+                width        : 192px;
+                height       : 192px;
+                border-radius: 8px;
+                border       : solid 1px #e5db20;
+
+                @media @phone {
+                    width : 144px;
+                    height: 144px;
+                }
+            }
         }
-    }
 
-    >h6 {
-        font-family: "OCRAStd";
-        font-size  : 14px;
-        color      : #fff200;
-        margin-top : 14px;
+        >h6 {
+            font-family: "OCRAStd";
+            font-size  : 14px;
+            color      : #fff200;
+            margin-top : 14px;
 
-        @media @phone {
-            margin-top: 12px;
+            @media @phone {
+                margin-top: 12px;
+            }
         }
-    }
 
-    >.caption-container {
-        display        : flex;
-        justify-content: space-between;
-        margin-top     : 9px;
+        >.caption-container {
+            display        : flex;
+            justify-content: space-between;
+            margin-top     : 9px;
+
+            >p {
+                font-family: "OCRAStd";
+                font-size  : 12px;
+                color      : #ada730;
+            }
+        }
 
         >p {
-            font-family: "OCRAStd";
-            font-size  : 12px;
-            color      : #ada730;
+            margin-top        : 12px;
+            font-size         : 12px;
+            color             : #b9b9b9;
+            line-height       : 16px;
+            text-overflow     : ellipsis;
+            overflow          : hidden;
+            word-break        : break-word;
+            display           : -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical
         }
-    }
-
-    >p {
-        margin-top: 12px;
-        font-size : 12px;
-        color     : #b9b9b9;
     }
 }

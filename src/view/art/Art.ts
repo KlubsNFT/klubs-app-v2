@@ -3,6 +3,7 @@ import { View, ViewParams } from "skydapp-common";
 import ImageItem from "../../component/ImageItem";
 import Layout from "../Layout";
 import ViewUtil from "../ViewUtil";
+import ArtData from "../../data/art.json";
 
 export default class Art implements View {
 
@@ -17,10 +18,10 @@ export default class Art implements View {
                 el("header",
                     el("h2", "Crypto Art"),
                     el(".tab-container",
-                        el("a.active", "All NFTs", { click: () => { ViewUtil.go("/art") } }),
-                        el("a", "On sale", { click: () => { ViewUtil.go("/art/on-sale") } }),
-                        el("a", "On Bid", { click: () => { ViewUtil.go("/art/on-bid") } }),
-                        el("a", "On Offerd", { click: () => { ViewUtil.go("/art/offerd") } }),
+                        el("a.active", "All NFTs", { click: () => { ViewUtil.go("/arts") } }),
+                        el("a", "On sale", { click: () => { ViewUtil.go("/arts/on-sale") } }),
+                        el("a", "On Bid", { click: () => { ViewUtil.go("/arts/on-bid") } }),
+                        el("a", "On Offerd", { click: () => { ViewUtil.go("/arts/offerd") } }),
                     ),
                     el("hr"),
                 ),
@@ -36,7 +37,11 @@ export default class Art implements View {
     }
 
     private loadProject(): void {
-        this.artDisplay.empty().append(new ImageItem("", "", "title", "@artist ID", "0"));
+        ArtData.map((data) => {
+            this.artDisplay.append(
+                new ImageItem("/arts/1", data.image, data.title, data.artist, data.price),
+            );
+        });
     }
 
     public changeParams(params: ViewParams, uri: string): void { }
