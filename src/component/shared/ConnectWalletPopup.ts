@@ -36,7 +36,7 @@ export default class ConnectWalletPopup extends Popup {
                             el("img", { src: "/images/icn/klip.svg", alt: "klip" }),
                             el("p", "카카오클립"),
                         ),
-                        el("a.cancel-button",
+                        el("a.cancel-button", { click: () => this.delete(), },
                             el("p", "연결하지않고 둘러보기"),
                         ),
                     ),
