@@ -79,7 +79,7 @@ export default class Home implements View {
     private loadArtList(): void {
         ArtData.map((data) => {
             this.artDisplay.append(
-                new ImageItem("/arts/1", data.image, data.title, data.artist, data.price),
+                new ImageItem(`/arts/${data.address}`, data.image, data.title, data.artist, data.price),
             );
         });
     }
@@ -87,7 +87,7 @@ export default class Home implements View {
     private loadPfpList(): void {
         PfpData.map((data) => {
             this.pfpDisplay.append(
-                new ProjectItem("/pfp/1", data.image, data.title, data.artist, data.description),
+                new ProjectItem(`/pfp/${data.address}`, data.image, data.title, data.artist, data.description),
             );
         });
     }

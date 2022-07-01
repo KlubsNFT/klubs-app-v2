@@ -3,6 +3,7 @@ import { View, ViewParams } from "skydapp-common";
 import ImageItem from "../../component/ImageItem";
 import Layout from "../Layout";
 import ViewUtil from "../ViewUtil";
+import ArtData from "../../data/art.json";
 
 export default class OnBid implements View {
 
@@ -20,9 +21,9 @@ export default class OnBid implements View {
                     this.idDisplay = el("h2", "Idname"),
                     this.subIdDisplay = el("h3", "BY IDNAME"),
                     el(".tab-container",
-                        el("a.active", "My Art List", { click: () => { ViewUtil.go("/user/my-arts") } }),
+                        el("a", "My Art List", { click: () => { ViewUtil.go("/user/my-arts") } }),
                         el("a", "On sale", { click: () => { ViewUtil.go("/user/on-sale") } }),
-                        el("a", "On Bid", { click: () => { ViewUtil.go("/user/on-bid") } }),
+                        el("a.active", "On Bid", { click: () => { ViewUtil.go("/user/on-bid") } }),
                         el("a", "On Offerd", { click: () => { ViewUtil.go("/user/offerd") } }),
                     ),
                     el("hr"),
@@ -45,9 +46,11 @@ export default class OnBid implements View {
     }
 
     private loadArts(): void {
-        this.artDisplay.empty().append(
-            new ImageItem("", "", "title", "@artist ID", "0.0"),
-        )
+        ArtData.map((data) => {
+            this.artDisplay.append(
+                new ImageItem(`/arts/${data.address}`, data.image, data.title, data.artist, data.price),
+            );
+        });
     }
 
     public changeParams(params: ViewParams, uri: string): void { }

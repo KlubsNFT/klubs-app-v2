@@ -6,8 +6,9 @@
 
         >header {
             >.title-cotnainer {
-                display    : flex;
-                align-items: baseline;
+                display        : flex;
+                justify-content: space-between;
+                align-items    : baseline;
 
                 >.content {
                     >h2 {
@@ -22,13 +23,19 @@
                         color      : #7228db;
                     }
                 }
-            }
 
-            >.img-container {
-                width           : 130px;
-                height          : 130px;
-                border-radius   : 18px;
-                background-color: #5c5656;
+                >.img-container {
+                    width           : 130px;
+                    height          : 130px;
+                    border-radius   : 18px;
+                    background-color: #5c5656;
+
+                    >img {
+                        width        : 130px;
+                        height       : 130px;
+                        border-radius: 18px;
+                    }
+                }
             }
 
             >.tab-container {

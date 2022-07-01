@@ -3,6 +3,7 @@ import { View, ViewParams } from "skydapp-common";
 import ImageItem from "../../component/ImageItem";
 import Layout from "../Layout";
 import ViewUtil from "../ViewUtil";
+import ArtData from "../../data/art.json";
 
 export default class ArtOfferd implements View {
 
@@ -36,7 +37,11 @@ export default class ArtOfferd implements View {
     }
 
     private loadProject(): void {
-        this.artDisplay.empty().append(new ImageItem("", "", "title", "@artist ID", "0"));
+        ArtData.map((data) => {
+            this.artDisplay.append(
+                new ImageItem("/arts/1", data.image, data.title, data.artist, data.price),
+            );
+        });
     }
 
     public changeParams(params: ViewParams, uri: string): void { }

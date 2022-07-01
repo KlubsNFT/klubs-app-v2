@@ -4,10 +4,12 @@ import ImageItem from "../../component/ImageItem";
 import Select from "../../component/shared/Select";
 import Layout from "../Layout";
 import ViewUtil from "../ViewUtil";
+import RabbitData from "../../data/klayrabbit.json";
 
 export default class PfpProject implements View {
 
     private nameDisplay: DomNode;
+    private idDisplay: DomNode;
     private pfpDisplay: DomNode;
 
     private container: DomNode;
@@ -20,10 +22,10 @@ export default class PfpProject implements View {
                     el(".title-cotnainer",
                         el(".content",
                             this.nameDisplay = el("h2", "Project name"),
-                            el("h3", "BY IDNAME"),
+                            this.idDisplay = el("h3", "BY IDNAME"),
                         ),
                         el(".img-container",
-                            el("img", { src: "", alt: "Project name" }),
+                            el("img", { src: "https://lh3.googleusercontent.com/0cdWDR5LsRf5xqwobQfI-i2oqA1XlaxqLIUpRBwLrinqeNt540wGEVSjDXFA5011R4av7WMq85KGH3wzBSPIYvI0xIw4XchZPu5W=s0", alt: "" }),
                         ),
                     ),
                     el(".tab-container",
@@ -55,8 +57,13 @@ export default class PfpProject implements View {
     }
 
     private loadProject(): void {
-        this.nameDisplay.empty().appendText("ProjectName");
-        this.pfpDisplay.empty().append(new ImageItem("", "", "title", "@artist ID", "0.0"));
+        this.nameDisplay.empty().appendText("KlayRabbit");
+        this.idDisplay.empty().appendText("KlayRabbit");
+        RabbitData.map((data) => {
+            this.pfpDisplay.append(
+                new ImageItem(`/pfp/${data.address}/${data.id}`, data.image, data.title, data.artist, data.price),
+            );
+        });
     }
 
     public changeParams(params: ViewParams, uri: string): void { }

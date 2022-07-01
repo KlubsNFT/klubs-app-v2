@@ -16,14 +16,16 @@ export default class ArtDetail implements View {
 
     private container: DomNode;
 
-    constructor() {
+    constructor(params: ViewParams) {
+        const addr = params.addr;
+
         Layout.current.title = "Art Detail";
         Layout.current.content.append(this.container = el(".art-detail-view",
             el("section",
                 el("header",
                     el("hr"),
                     el(".img-container",
-                        this.imageDisplay = el("img", { src: ArtData[4].image, alt: "test" }),
+                        this.imageDisplay = el("img", { src: ArtData[addr].image, alt: "test" }),
                     ),
                     el("hr"),
                 ),
@@ -61,16 +63,16 @@ export default class ArtDetail implements View {
                 ),
             ),
         ));
-        this.init();
+        this.init(parseInt(addr!, 10));
     }
 
-    private init(): void {
+    private init(addr: number): void {
         this.imageDisplay.empty().append(
         );
-        this.titleDisplay.empty().appendText(ArtData[4].title);
+        this.titleDisplay.empty().appendText(ArtData[addr].title);
         // this.dateDisplay.empty().append();
-        this.priceDisplay.empty().appendText(ArtData[4].price);
-        this.artistDisplay.empty().appendText(ArtData[4].artist);
+        this.priceDisplay.empty().appendText(ArtData[addr].price);
+        this.artistDisplay.empty().appendText(ArtData[addr].artist);
         // this.ownerDisplay.empty().append();
         // this.descriptionDisplay.empty().append();
         // this.transactionDisplay.empty().append();

@@ -3,6 +3,9 @@ import { View, ViewParams } from "skydapp-common";
 import ImageItem from "../../component/ImageItem";
 import Layout from "../Layout";
 import ViewUtil from "../ViewUtil";
+import ArtData from "../../data/art.json";
+import Wallet from "../../klaytn/Wallet";
+import CommonUtil from "../../CommonUtil";
 
 export default class MyArts implements View {
 
@@ -21,9 +24,10 @@ export default class MyArts implements View {
                     this.subIdDisplay = el("h3", "BY IDNAME"),
                     el(".tab-container",
                         el("a.active", "My Art List", { click: () => { ViewUtil.go("/user/my-arts") } }),
-                        el("a", "On sale", { click: () => { ViewUtil.go("/user/on-sale") } }),
-                        el("a", "On Bid", { click: () => { ViewUtil.go("/user/on-bid") } }),
-                        el("a", "On Offerd", { click: () => { ViewUtil.go("/user/offerd") } }),
+                        el("a", "My Pfp List", { click: () => { ViewUtil.go("/user/my-pfps") } }),
+                        // el("a", "On sale", { click: () => { ViewUtil.go("/user/on-sale") } }),
+                        // el("a", "On Bid", { click: () => { ViewUtil.go("/user/on-bid") } }),
+                        // el("a", "On Offerd", { click: () => { ViewUtil.go("/user/offerd") } }),
                     ),
                     el("hr"),
                 ),
@@ -39,15 +43,18 @@ export default class MyArts implements View {
         this.loadArts();
     }
 
-    private loadId(): void {
-        this.idDisplay.empty().appendText("Idname");
-        this.subIdDisplay.empty().appendText("BY IDNAME");
+    private async loadId(): Promise<void> {
+        const address = await Wallet.loadAddress();
+        this.idDisplay.empty().appendText(CommonUtil.shortenAddress(address!));
+        this.subIdDisplay.empty().appendText(`${address}`);
     }
 
     private loadArts(): void {
-        this.artDisplay.empty().append(
-            new ImageItem("", "", "title", "@artist ID", "0.0"),
-        )
+        ArtData.map((data) => {
+            this.artDisplay.append(
+                new ImageItem(`/arts/${data.address}`, data.image, data.title, data.artist, data.price),
+            );
+        });
     }
 
     public changeParams(params: ViewParams, uri: string): void { }

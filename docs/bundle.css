@@ -1048,6 +1048,7 @@ body {
 }
 .pfp-project-view > section > header > .title-cotnainer {
   display: flex;
+  justify-content: space-between;
   align-items: baseline;
 }
 .pfp-project-view > section > header > .title-cotnainer > .content > h2 {
@@ -1060,11 +1061,16 @@ body {
   margin-top: 10px;
   color: #7228db;
 }
-.pfp-project-view > section > header > .img-container {
+.pfp-project-view > section > header > .title-cotnainer > .img-container {
   width: 130px;
   height: 130px;
   border-radius: 18px;
   background-color: #5c5656;
+}
+.pfp-project-view > section > header > .title-cotnainer > .img-container > img {
+  width: 130px;
+  height: 130px;
+  border-radius: 18px;
 }
 .pfp-project-view > section > header > .tab-container {
   display: flex;
@@ -1271,6 +1277,11 @@ body {
   height: 100%;
   border: solid 1px #707070;
   background-color: #fff200;
+}
+.art-detail-view > section > header > .img-container > img {
+  max-width: 378px;
+  width: 100%;
+  max-height: 492px;
 }
 .art-detail-view > section > header > hr {
   width: 100%;

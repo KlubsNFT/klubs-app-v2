@@ -15,9 +15,11 @@ import PfpAddByMinter from "./view/pfp/AddByPfpMinter";
 import PfpAddByOther from "./view/pfp/AddByPfpOther";
 import PfpAddByOwner from "./view/pfp/AddByPfpOwner";
 import Pfp from "./view/pfp/Pfp";
+import PfpDetail from "./view/pfp/PfpDetail";
 import PfpProject from "./view/pfp/PfpProject";
 import PfpRanking from "./view/pfp/PfpRanking";
 import MyArts from "./view/user/MyArts";
+import MyPfps from "./view/user/MyPfp";
 import Offerd from "./view/user/Offerd";
 import OnBid from "./view/user/OnBid";
 import OnSale from "./view/user/OnSale";
@@ -30,6 +32,7 @@ import OnSale from "./view/user/OnSale";
     SkyRouter.route("", Home);
 
     SkyRouter.route("user/my-arts", MyArts);
+    SkyRouter.route("user/my-pfps", MyPfps);
     SkyRouter.route("user/on-sale", OnSale);
     SkyRouter.route("user/on-bid", OnBid);
     SkyRouter.route("user/offerd", Offerd);
@@ -40,18 +43,19 @@ import OnSale from "./view/user/OnSale";
     SkyRouter.route("pfp/add-by-minter", PfpAddByMinter);
     SkyRouter.route("pfp/add-by-other", PfpAddByOther);
 
-    SkyRouter.route("pfp/{addr}", PfpProject);
     SkyRouter.route("pfp/{addr}/on-sale", PfpProject);
     SkyRouter.route("pfp/{addr}/on-bid", PfpProject);
     SkyRouter.route("pfp/{addr}/offerd", PfpProject);
+    SkyRouter.route("pfp/{addr}", PfpProject);
+    SkyRouter.route("pfp/{addr}/{id}", PfpDetail);
 
     SkyRouter.route("arts", Art);
-    SkyRouter.route("arts/{addr}", ArtDetail);
     SkyRouter.route("arts/on-sale", ArtOnSale);
     SkyRouter.route("arts/on-bid", ArtOnBid);
     SkyRouter.route("arts/offerd", ArtOfferd);
     SkyRouter.route("arts/artists/add", AddArtists);
     SkyRouter.route("arts/artists/update", UpdateArtists);
+    SkyRouter.route("arts/{addr}", ArtDetail);
 
     if (sessionStorage.__spa_path) {
         SkyRouter.go(sessionStorage.__spa_path);
