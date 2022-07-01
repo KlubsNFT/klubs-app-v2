@@ -22,7 +22,7 @@ export default class Home implements View {
                 el("header",
                     el(".pc-container",
                         el(".banner-container",
-                            this.bannerDisplay = el("img", { src: "https://api.klu.bs/thumbnail?url=https%3A%2F%2Fstorage.googleapis.com%2Fklubs%2Fpfpbanner%2Fda7222bf-788a-4f05-b6f7-0c93325447b1.png", alt: "" }),
+                            this.bannerDisplay = el("img", { src: "https://api.klu.bs/thumbnail?url=https%3A%2F%2Fstorage.googleapis.com%2Fklubs%2Fpfpbanner%2Fda7222bf-788a-4f05-b6f7-0c93325447b1.png", alt: "banner" }),
                         ),
                         el(".title-container",
                             el("h3", "Meet"),
@@ -38,9 +38,11 @@ export default class Home implements View {
                     el(".mobile-container",
                         el(".top-container",
                             el("h3", "Meet Connect Play"),
-                            el("p", "BY IDNAME"),
+                            this.bannerArtistDisplay = el("p", "BY IDNAME"),
                         ),
-                        el(".banner-container"),
+                        el(".banner-container",
+                            this.bannerDisplay = el("img", { src: "https://api.klu.bs/thumbnail?url=https%3A%2F%2Fstorage.googleapis.com%2Fklubs%2Fpfpbanner%2Fda7222bf-788a-4f05-b6f7-0c93325447b1.png", alt: "banner" }),
+                        ),
                         el(".bottom-container",
                             el("h3", "with"),
                             el("h2", "KLUBS"),
@@ -72,6 +74,7 @@ export default class Home implements View {
 
     private loadBanner(): void {
         this.bannerDisplay.empty().append(
+            this.bannerDisplay = el("img", { src: "https://api.klu.bs/thumbnail?url=https%3A%2F%2Fstorage.googleapis.com%2Fklubs%2Fpfpbanner%2Fda7222bf-788a-4f05-b6f7-0c93325447b1.png", alt: "banner" }),
         );
         this.bannerArtistDisplay.empty().appendText("BY KlayRabbit");
     }
