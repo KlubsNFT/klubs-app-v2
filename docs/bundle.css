@@ -827,6 +827,16 @@ body {
   color: #fff;
   background-color: #fff;
 }
+.home-view > .kollections {
+  color: #eee;
+}
+.home-view > .kollections > h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.home-view > .kollections > p {
+  line-height: 1.5em;
+}
 .home-view > section {
   margin-top: 42px;
 }
